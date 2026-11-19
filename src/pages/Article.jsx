@@ -1,11 +1,11 @@
-import { useState, useEffect } from "react";
+import { useParams, Link } from "react-router";   
 import { API_URL } from "../constants";
 import EtatRequete from "../components/EtatRequete";
 import ListeCommentaires from "../components/ListeCommentaires";
 import CommentaireForm from "../components/CommentaireForm";
 
 function Article() {
-  const id = 1; // TEMPORAIRE : sera remplacé par useParams au chapitre 5
+  const { id } = useParams();
 
   const [article, setArticle] = useState(null);
   const [commentaires, setCommentaires] = useState([]);
@@ -46,6 +46,7 @@ function Article() {
     <EtatRequete chargement={chargement} erreur={erreur}>
       {article && (
         <article className="page article-detail">
+          <Link to="/articles">← Retour aux articles</Link>
           <h1>{article.title}</h1>
           <p>{article.body}</p>
           <h2>Commentaires</h2>

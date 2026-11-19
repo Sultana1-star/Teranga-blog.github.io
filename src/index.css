@@ -317,3 +317,41 @@ textarea.champ {
     font-size: 1.8rem;
   }
 }
+.navbar .logo-texte {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #fff;
+  margin-right: auto;
+}
+
+.badge {
+  display: inline-block;
+  min-width: 1.4rem;
+  padding: 0 0.4rem;
+  border-radius: 999px;
+  background: #fff;
+  color: var(--rose-fonce);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.lien-lire {
+  color: var(--rose);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.lien-lire:hover {
+  text-decoration: underline;
+}
+
+a.btn {
+  display: inline-block;
+  text-decoration: none;
+}
+
+main a {
+  color: var(--rose-fonce);
+}

@@ -11,7 +11,7 @@ return (
         <ArticleCard
           key={a.id}
           article={a}
-          estFavori={favoris.includes(a.id)}
+          estFavori={favoris.some((f) => f.id === a.id)}
           onToggleFavori={onToggleFavori}
         />
       ))}

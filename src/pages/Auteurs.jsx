@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { API_URL } from "../constants";
 import EtatRequete from "../components/EtatRequete";
+import { Link } from "react-router"
 
 function Auteurs() {
   const [auteurs, setAuteurs] = useState([]);
@@ -35,8 +36,11 @@ function Auteurs() {
         <ul className="liste-auteurs">
           {auteurs.map((a) => (
             <li key={a.id} className="auteur-item">
-              <strong>{a.name}</strong> ({a.username}), {a.company.name}
-            </li>
+           <Link to={`/auteurs/${a.id}`}>
+            <strong>{a.name}</strong>
+              </Link>{" "}
+              ({a.username}), {a.company.name}
+              </li>
           ))}
         </ul>
       </EtatRequete>
