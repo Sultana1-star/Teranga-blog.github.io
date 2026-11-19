@@ -1,0 +1,319 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600&display=swap");
+
+:root {
+  --rose: #c2577e;
+  --rose-fonce: #8e3a5d;
+  --rose-clair: #e8b4c4;
+  --mauve: #a14b9c;
+  --fond: #fdf4f6;
+  --carte: #ffffff;
+  --texte: #4a3340;
+  --gris: #8a7480;
+  --bordure: #f3d9e1;
+  --erreur: #c0392b;
+  --rayon: 20px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", system-ui, sans-serif;
+  font-size: 16px;
+  background: linear-gradient(180deg, #fff0f4 0%, #fdf4f6 40%, #f6eefc 100%);
+  background-attachment: fixed;
+  color: var(--texte);
+  line-height: 1.65;
+}
+
+/* Les boutons et champs n'héritent pas de la police par défaut */
+button,
+input,
+textarea {
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+h1, h2, h3 {
+  font-family: "Playfair Display", Georgia, serif;
+  line-height: 1.25;
+  margin: 0 0 0.6rem;
+}
+
+/* ===== Mise en page ===== */
+.page {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 4rem;
+}
+
+.page-titre {
+  font-size: 2.3rem;
+  color: var(--rose-fonce);
+  margin-bottom: 1.5rem;
+}
+
+.page-titre::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 4px;
+  margin-top: 0.6rem;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--rose), #b69ae0);
+}
+
+/* ===== Compteur de favoris ===== */
+.compteur {
+  display: inline-block;
+  background: #fff;
+  color: var(--rose-fonce);
+  border: 1px solid var(--bordure);
+  border-radius: 999px;
+  padding: 0.35rem 1.1rem;
+  font-weight: 500;
+  margin: 0 0 1.75rem;
+  box-shadow: 0 4px 12px rgba(194, 87, 126, 0.12);
+}
+
+.compteur::before {
+  content: "♥ ";
+  color: var(--rose);
+}
+
+/* ===== Cartes d'articles ===== */
+.liste-articles {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+}
+
+.article-card {
+  background: var(--carte);
+  border: 1px solid var(--bordure);
+  border-radius: var(--rayon);
+  padding: 1.5rem 1.6rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  box-shadow: 0 6px 20px rgba(194, 87, 126, 0.08);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.liste-articles .article-card {
+  margin-bottom: 0;
+}
+
+.article-card:hover {
+  box-shadow: 0 12px 28px rgba(194, 87, 126, 0.18);
+  transform: translateY(-3px);
+}
+
+.article-card h3 {
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  color: var(--rose-fonce);
+  margin: 0;
+}
+
+.article-card p {
+  margin: 0;
+  color: var(--gris);
+  flex-grow: 1;
+}
+
+/* ===== Boutons ===== */
+.btn {
+  background: linear-gradient(135deg, var(--rose), var(--mauve));
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  padding: 0.6rem 1.4rem;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(194, 87, 126, 0.3);
+  transition: filter 0.2s, transform 0.2s;
+}
+
+.btn:hover {
+  filter: brightness(0.92);
+  transform: translateY(-1px);
+}
+
+.btn-favori {
+  background: #fff;
+  color: var(--rose-fonce);
+  border: 1.5px solid var(--rose);
+  box-shadow: none;
+  align-self: flex-start;
+  margin-top: 0.4rem;
+}
+
+.btn-favori:hover {
+  background: #fff0f4;
+  filter: none;
+}
+
+.btn-favori.actif {
+  background: linear-gradient(135deg, var(--rose), var(--mauve));
+  border-color: transparent;
+  color: #fff;
+}
+
+/* ===== Recherche et champs ===== */
+.recherche,
+.champ {
+  display: block;
+  width: 100%;
+  padding: 0.8rem 1.25rem;
+  border: 1.5px solid var(--bordure);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--texte);
+  margin-bottom: 1.25rem;
+}
+
+textarea.champ {
+  border-radius: 20px;
+  min-height: 120px;
+  resize: vertical;
+}
+
+.recherche:focus,
+.champ:focus {
+  outline: none;
+  border-color: var(--rose);
+  box-shadow: 0 0 0 4px rgba(194, 87, 126, 0.15);
+}
+
+/* ===== Commentaires ===== */
+.commentaires {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.commentaire {
+  background: #fff;
+  border-left: 4px solid var(--rose);
+  border-radius: 14px;
+  padding: 1rem 1.25rem;
+  box-shadow: 0 3px 10px rgba(194, 87, 126, 0.08);
+}
+
+.commentaire strong {
+  text-transform: capitalize;
+  color: var(--rose-fonce);
+}
+
+.commentaire p {
+  margin: 0.3rem 0 0;
+  color: var(--gris);
+}
+
+.formulaire {
+  background: var(--carte);
+  border: 1px solid var(--bordure);
+  border-radius: var(--rayon);
+  padding: 1.5rem;
+  box-shadow: 0 6px 20px rgba(194, 87, 126, 0.08);
+}
+
+/* ===== Messages d'état ===== */
+.message {
+  padding: 1.25rem;
+  text-align: center;
+  color: var(--gris);
+}
+
+.message-erreur {
+  background: #fdecee;
+  color: var(--erreur);
+  border-radius: 14px;
+}
+
+.erreur-champ {
+  color: var(--erreur);
+  margin: 0 0 1rem;
+  font-size: 0.9rem;
+}
+
+/* ===== Détail d'un article et auteurs ===== */
+.article-detail h1 {
+  text-transform: capitalize;
+  color: var(--rose-fonce);
+  font-size: 2rem;
+}
+
+.article-detail > p {
+  font-size: 1.05rem;
+  margin-bottom: 2.5rem;
+}
+
+.article-detail h2 {
+  color: var(--rose-fonce);
+  margin-bottom: 1rem;
+}
+
+.liste-auteurs {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.auteur-item {
+  background: var(--carte);
+  border: 1px solid var(--bordure);
+  border-radius: var(--rayon);
+  padding: 1.1rem 1.4rem;
+  box-shadow: 0 4px 14px rgba(194, 87, 126, 0.08);
+}
+
+/* ===== Barre de navigation (étape 5) ===== */
+.navbar {
+  background: linear-gradient(90deg, var(--rose-fonce), var(--mauve));
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+  padding: 0.9rem 1.75rem;
+  flex-wrap: wrap;
+}
+
+.navbar .logo {
+  height: 36px;
+}
+
+.navbar a {
+  color: #ffe3ec;
+  text-decoration: none;
+  padding: 0.3rem 0.1rem;
+  border-bottom: 2px solid transparent;
+}
+
+.navbar a:hover {
+  color: #fff;
+}
+
+.navbar a.active {
+  color: #fff;
+  border-bottom-color: #fff;
+  font-weight: 600;
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 600px) {
+  .page {
+    padding: 1.5rem 1rem 3rem;
+  }
+  .page-titre {
+    font-size: 1.8rem;
+  }
+}
