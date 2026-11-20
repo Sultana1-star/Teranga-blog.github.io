@@ -355,3 +355,71 @@ a.btn {
 main a {
   color: var(--rose-fonce);
 }
+/* Accueil */
+.hero {
+  text-align: center;
+  background: #fff;
+  border: 1px solid var(--bordure);
+  border-radius: 28px;
+  padding: 3rem 1.5rem;
+  box-shadow: 0 10px 30px rgba(194, 87, 126, 0.12);
+}
+
+.hero-logo {
+  width: 140px;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.hero .page-titre::after {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-texte {
+  max-width: 520px;
+  margin: 0 auto 1.75rem;
+  color: var(--gris);
+}
+
+.hero-actions {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-contour {
+  background: #fff;
+  color: var(--rose-fonce);
+  border: 1.5px solid var(--rose);
+  box-shadow: none;
+}
+
+.btn-contour:hover {
+  background: #fff0f4;
+  filter: none;
+}
+
+/* Logo dans la barre de navigation : pastille blanche */
+.logo-lien {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+  background: #fff;
+  border-radius: 999px;
+  padding: 0.15rem 0.9rem;
+  overflow: hidden;
+}
+
+.navbar .logo {
+  height: 32px;
+  width: auto;
+  display: block;
+  mix-blend-mode: multiply;
+}
+
+/* Logo de la page d'accueil */
+.hero-logo {
+  mix-blend-mode: multiply;
+}

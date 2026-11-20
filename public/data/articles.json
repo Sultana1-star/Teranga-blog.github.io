@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "userId": 1,
+    "title": "Bienvenue à la Teranga Academy",
+    "body": "La Teranga Academy accueille chaque année de nouveaux étudiants passionnés par le numérique. Découvrez comment se déroule la rentrée et ce qui vous attend dans les prochains mois."
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "title": "Apprendre React pas à pas",
+    "body": "React se comprend mieux en construisant de vraies applications. Commencez par les composants et les props, puis passez à l'état avant d'aborder les effets et la navigation."
+  },
+  {
+    "id": 3,
+    "userId": 2,
+    "title": "Les astuces pour bien réviser",
+    "body": "Réviser un peu chaque jour vaut mieux qu'une longue nuit blanche. Planifiez vos séances, alternez cours et exercices, et n'oubliez pas de dormir suffisamment."
+  },
+  {
+    "id": 4,
+    "userId": 2,
+    "title": "Mon premier stage à Dakar",
+    "body": "Un stage est l'occasion de voir comment fonctionne une vraie équipe. Posez des questions, prenez des notes et n'ayez pas peur de montrer ce que vous savez faire."
+  },
+  {
+    "id": 5,
+    "userId": 3,
+    "title": "La teranga, l'art de l'hospitalité",
+    "body": "Au Sénégal, l'accueil des invités est une valeur centrale. On partage le repas, on prend le temps d'écouter et on fait en sorte que chacun se sente chez lui."
+  },
+  {
+    "id": 6,
+    "userId": 3,
+    "title": "Réussir son premier projet en équipe",
+    "body": "Un projet collectif demande de la communication. Répartissez clairement les tâches, faites des points réguliers et utilisez Git pour garder une trace du travail de chacun."
+  }
+]
