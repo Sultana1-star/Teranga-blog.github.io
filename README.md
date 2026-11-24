@@ -5,7 +5,7 @@ leur détail avec commentaires, les auteurs, des favoris partagés entre les
 pages et un espace protégé simulé. Les données viennent de l'API publique
 JSONPlaceholder.
 
-**Adresse en ligne :** 
+**Adresse en ligne :** git remote add origin https://github.com/Sultana1-star/Teranga-blog.github.io
 
 ## Lancer le projet
 
